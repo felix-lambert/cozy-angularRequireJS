@@ -2,14 +2,12 @@
 'use strict';
 
 require([
-	'angular'
-], function (angular) {
+	'angular',
+	'cozydb_browser'
+], function (angular, cozydb) {
 	require([
-		'controllers/todo', 
-		'directives/todoFocus', 
-		'directives/todoEscape',
-		'services/todoStorage'
-	], function (todoCtrl, todoFocusDir, todoEscapeDir, todoStorageSrv) {
+		'controllers/todo' 
+	], function (todoCtrl) {
 		angular
 			.module('todomvc', [todoFocusDir, todoEscapeDir, todoStorageSrv])
 			.controller('TodoController', todoCtrl);
