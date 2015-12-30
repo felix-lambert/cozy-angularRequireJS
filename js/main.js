@@ -7,7 +7,12 @@ require.config({
 		cozydb_browser: '../node_modules/cozydb_browser/'
 	},
 	shim: {
-		'angular': ['angular'], 'cozydb_browser': ['angular']
+		angular: {
+			exports: 'angular',
+		},
+		cozydb_browser: {
+			exports: 'angular'
+		}
 	},
 	deps: ['app']
 });
