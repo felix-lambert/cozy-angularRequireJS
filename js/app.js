@@ -5,10 +5,13 @@ require([
 	'angular'
 ], function (angular) {
 	require([
-		'controllers/todo' 
-	], function (todoCtrl) {
+		'controllers/todo', 
+		'directives/todoFocus', 
+		'directives/todoEscape',
+		'services/todoStorage'
+	], function (todoCtrl, todoFocusDir, todoEscapeDir, todoStorageSrv) {
 		angular
-			.module('todomvc', [])
+			.module('todomvc', [todoFocusDir, todoEscapeDir, todoStorageSrv])
 			.controller('TodoController', todoCtrl);
 		angular.bootstrap(document, ['todomvc']);			
 	});	
