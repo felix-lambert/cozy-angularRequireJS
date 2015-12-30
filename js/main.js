@@ -9,7 +9,11 @@ require.config({
 	shim: {
 		angular: {
 			exports: 'angular',
-		}
+		},
+		cozydb_browser: ['angular']
 	},
+	priority: [
+		"angular"
+	],
 	deps: ['app']
 });
