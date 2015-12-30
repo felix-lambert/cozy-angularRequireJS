@@ -9,8 +9,7 @@
 
 define([
 	'angular',
-	'cozydb_browser'
-], function (angular, cozydb_browser) {
+], function (angular) {
 	return ['$scope', '$location',
 		function ($scope, $location) {
 

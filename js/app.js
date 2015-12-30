@@ -5,7 +5,8 @@ require([
 	'angular'
 ], function (angular) {
 	require([
-		'controllers/todo', 
+		'cozydb_browser',
+		'controllers/todo' 
 	], function (todoCtrl) {
 		angular
 			.module('todomvc', [])
