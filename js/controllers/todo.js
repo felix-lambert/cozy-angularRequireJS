@@ -12,33 +12,11 @@ define([
 ], function (angular) {
 	return ['$scope', '$location', 'todoStorage', 'filterFilter',
 		function ($scope, $location, todoStorage, filterFilter) {
-			var todos = $scope.todos = todoStorage.get();
-
-			$scope.newTodo = '';
-			$scope.editedTodo = null;
-
-			$scope.$watch('todos', function () {
-				$scope.remainingCount = filterFilter(todos, { completed: false }).length;
-				$scope.doneCount = todos.length - $scope.remainingCount;
-				$scope.allChecked = !$scope.remainingCount;
-				todoStorage.put(todos);
-			}, true);
-
-			if ($location.path() === '') {
-				$location.path('/');
-			}
-
-			$scope.location = $location;
-
-			$scope.$watch('location.path()', function (path) {
-				$scope.statusFilter = (path === '/active') ?
-					{ completed: false } : (path === '/completed') ?
-					{ completed: true } : null;
-			});
-
+			
 
 			$scope.addTodo = function () {
-				cozydb_browser.escape();
+				console.log('inside todo');
+				// cozydb_browser.escape();
 			};
 
 
