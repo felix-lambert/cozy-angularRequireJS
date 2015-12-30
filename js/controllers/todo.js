@@ -8,8 +8,9 @@
  */
 
 define([
-	'angular'
-], function (angular) {
+	'angular',
+	'cozydb_browser'
+], function (angular, cozydb_browser) {
 	return ['$scope', '$location', 'todoStorage', 'filterFilter',
 		function ($scope, $location, todoStorage, filterFilter) {
 			var todos = $scope.todos = todoStorage.get();
@@ -38,17 +39,7 @@ define([
 
 
 			$scope.addTodo = function () {
-				var newTodo = $scope.newTodo.trim();
-				if (!newTodo.length) {
-					return;
-				}
-
-				todos.push({
-					title: newTodo,
-					completed: false
-				});
-
-				$scope.newTodo = '';
+				cozydb_browser.escape();
 			};
 
 
