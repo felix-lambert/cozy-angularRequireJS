@@ -10,8 +10,8 @@ require.config({
 		angular: {
 			exports: 'angular',
 		},
-		cozydb_browser: {
-			exports: 'angular'
+		angular: {
+			exports: 'cozydb_browser'
 		}
 	},
 	deps: ['app']
