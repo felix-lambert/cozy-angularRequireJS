@@ -7,7 +7,8 @@ require([
 	require([
 		'controllers/todo', 
 	], function (todoCtrl) {
-		angular.controller('TodoController', todoCtrl);
+		angular
+			.controller('TodoController', todoCtrl);
 		angular.bootstrap(document, ['todomvc']);			
 	});	
 });
