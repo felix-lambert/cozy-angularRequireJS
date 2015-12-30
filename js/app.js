@@ -2,14 +2,16 @@
 'use strict';
 
 require([
-	'angular',
-	'cozydb_browser'
+	'angular'
 ], function (angular) {
-	require([
+	require(['cozydb_browser'], function (cozydb_browser) {
+		require([
 		'controllers/todo', 
-	], function (todoCtrl, cozydb_browser) {
-		angular
-			.controller('TodoController', todoCtrl);
-		angular.bootstrap(document, ['todomvc']);			
-	});	
+		], function (todoCtrl) {
+			angular
+				.controller('TodoController', todoCtrl);
+			angular.bootstrap(document, ['todomvc']);			
+		});
+	});
+		
 });
