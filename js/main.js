@@ -8,7 +8,10 @@ require.config({
 	},
 	shim: {
 		angular: {
-			exports: 'angular',
+			exports: 'angular'
+		},
+		cozydb_browser: {
+			exports: 'cozydb_browser'
 		}
 	},
 	deps: ['app']
