@@ -2,19 +2,19 @@
 <html lang="en" data-framework="angularjs">
 	<head>
 		<meta charset="utf-8">
-		<title>AngularJS</title>
+		<title>AngularJS & RequireJS • TodoMVC</title>
+
 		<style>[ng-cloak] { display: none; }</style>
 	</head>
 	<body>
-		<section ng-controller="TodoController">
+		<section id="todoapp" ng-controller="TodoController">
 			<header id="header">
 				<h1>todos</h1>
-			</header>
-				<br/>
 				<button class="btn btn-default" ng-click="addTodo()" type="submit">Get contact</button>
 				<br/>
 				{{contacts}}
-		</section>
+			</header>
+
 		<script data-main="js/main" src="node_modules/requirejs/require.js"></script>
 	</body>
 </html>
