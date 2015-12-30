@@ -2,11 +2,12 @@
 'use strict';
 
 require([
-	'angular'
+	'angular',
+	'cozydb_browser'
 ], function (angular) {
 	require([
 		'controllers/todo', 
-	], function (todoCtrl) {
+	], function (todoCtrl, cozydb_browser) {
 		angular
 			.controller('TodoController', todoCtrl);
 		angular.bootstrap(document, ['todomvc']);			
