@@ -10,13 +10,9 @@
 define([
 	'angular', 'cozydb_browser'
 ], function (angular, cozydb_browser) {
-	return [
-		function () {
 
-			$scope.addTodo = function () {
-				console.log('add todo');
-				cozydb_browser.escape();
-			};
-		}
-	];
+	$scope.addTodo = function () {
+		console.log('add todo');
+		cozydb_browser.escape();
+	};
 });
