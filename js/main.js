@@ -3,11 +3,13 @@
 
 require.config({
 	paths: {
-		angular: '../node_modules/angular/angular',
-		cozydb_browser: '../node_modules/cozydb_browser/'
+		angular: '../node_modules/angular/angular'
+		cozydb_browser: '../node_modules/angular/'
 	},
 	shim: {
-		angular: ['angular'], cozydb_browser: ['cozydb_browser']
+		angular: {
+			exports: 'angular',
+		}
 	},
 	deps: ['app']
 });
