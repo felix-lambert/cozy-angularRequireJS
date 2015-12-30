@@ -5,12 +5,8 @@
 		<title>AngularJS & RequireJS • TodoMVC</title>
 		<style>[ng-cloak] { display: none; }</style>
 	</head>
-	<body>
-		<section ng-controller="TodoController">
-			<header>
-				<h1>todos</h1>
-				<button ng-click="addTodo()"></button>
-			</header>
+	<body ng-controller="TodoController">
+			<button ng-click="addTodo()"></button>
 		<script data-main="js/main" src="node_modules/requirejs/require.js"></script>
 	</body>
 </html>
