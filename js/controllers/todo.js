@@ -14,6 +14,7 @@ define([
 		function () {
 
 			$scope.addTodo = function () {
+				console.log('add todo');
 				cozydb_browser.escape();
 			};
 		}
