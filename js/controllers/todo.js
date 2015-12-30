@@ -9,7 +9,8 @@
 
 define([
 	'angular',
-], function (angular) {
+	'cozydb_browser'
+], function (angular, cozydb_browser) {
 	return ['$scope', '$location', 'todoStorage', 'filterFilter',
 		function ($scope, $location, todoStorage, filterFilter) {
 			var todos = $scope.todos = todoStorage.get();
