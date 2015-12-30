@@ -7,21 +7,15 @@
 		<style>[ng-cloak] { display: none; }</style>
 	</head>
 	<body>
-		<section id="todoapp" ng-controller="TodoController">
+		<section ng-controller="TodoController">
 			<header id="header">
 				<h1>todos</h1>
 			</header>
-			<section id="main" ng-cloak>
 				<br/>
 				<button class="btn btn-default" ng-click="addTodo()" type="submit">Get contact</button>
 				<br/>
 				{{contacts}}
-			</section>
-			<footer id="footer" ng-show="todos.length" ng-cloak>
-				
-			</footer>
 		</section>
-		<footer id="info">
 		<script data-main="js/main" src="node_modules/requirejs/require.js"></script>
 	</body>
 </html>

@@ -8,10 +8,10 @@
  */
 
 define([
-	'angular',
-], function (angular) {
-	return ['$scope', '$location',
-		function ($scope, $location) {
+	'angular', 'cozydb_browser'
+], function (angular, cozydb_browser) {
+	return [
+		function () {
 
 			$scope.addTodo = function () {
 				cozydb_browser.escape();
